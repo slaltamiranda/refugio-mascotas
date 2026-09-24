@@ -6,29 +6,37 @@
     <title>Inicio | Huellitas Felices</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="background-color: #a8b8a5;">
-    <header>
-        <div class="logo"> <!-- Logo del refugio -->
-            <img src="images/logo.png" alt="Logo de Huellitas Felices">
+<body>
+
+    <!-- Encabezado con logo y barra de navegación -->
+    <header class="header">
+        <div class="nav-bar">
+            <img src="images/logo.png" alt="Logo de Huellitas Felices" class="logo">
+            <div class="header-contenido">
+                <h1 class="title">Huellitas Felices</h1>
+                <nav class="nav">
+                    <ul class="lista">
+                        <li><a href="index.html" class="active-page">Inicio</a></li>
+                        <li><a href="catalogo.html">Adoptar</a></li>
+                        <li><a href="#pie-pagina">Contacto</a></li>
+                        <li><a href="solicitudes.html">Solicitudes</a></li>
+                    </ul>
+
+                    <div class="auth-buttons">
+                        <div class="button-login">
+                            <a href="#">Iniciar Sesión</a>
+                        </div>
+                        <div class="button-register">
+                            <a href="#">Registrarse</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
-        <h1>Huellitas Felices</h1>
-        <nav> <!-- Barra de navegación y registro/inicio de sesión -->
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Adoptar</a></li>
-                <li><a href="#pie-pagina">Contacto</a></li>
-                <li><a href="solicitudes.html">Solicitudes</a></li>
-                <div> <!-- Iniciar Sesión -->
-                    <li><a href="login.html">Iniciar Sesión</a></li>
-                </div>
-                <div> <!-- Registrarse -->
-                    <li><a href="login.html">Registrarse</a></li>
-                </div>
-            </ul>
-        </nav>
     </header>
 
-    <h2>Bienvenido a Huellitas Felices</h2>
+    <!-- Sección de "¿Quiénes somos?" -->
+    <h2 class="subtitle">¿Quiénes somos?</h2>
     <p>En Huellitas Felices rescatamos, rehabilitamos y cuidamos a perros y gatos en situación de calle. Nuestro objetivo es brindarles una segunda oportunidad y encontrarles un hogar responsable lleno de cariño</p>
 
     <button type="button">Adoptar</button>

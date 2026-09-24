@@ -1,5 +1,108 @@
+@font-face {
+  font-family: 'open-sauce-sans';
+  src: url('fonts/open-sauce-sans.woff2') format('woff2');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root { /* Colores de la pagina */
+  --primary-color: #49352d;
+  --secondary-color: #6b4e42;
+  --terciary-color: #9e7361;
+  --featured: #a8b8a5;
+  --bg-color: #f6f1eb;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'open-sauce-sans', sans-serif;
+}
+
+/* Estilos para el encabezado */
+
+.header {
+  background-color: var(--primary-color);
+  padding: 15px 25px;
+  color: white;
+  width: 100%;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+}
+
+.header-contenido {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lista {
+  list-style: none;
+  display: flex;
+  flex-direction: space-between;
+  font-size: 2rem;
+  gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.title{
+    font-size: 3.5rem;
+}
+
+.subtitle{
+    font-size: 2rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.active-page {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.button-login {
+    display: flex;
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 2rem;
+}
+
+.button-register {
+    display: flex;
+    background-color: var(--featured);
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 2rem;
+}
+
+/* Seccion de "¿Quienes somos?" */
+
+/* ------------------------------------------------------------------------- */
