@@ -17,9 +17,17 @@
   --bg-color: #f6f1eb;
 }
 
-body{
+html, body{
+    width: 100%;
+    height: auto;
     background-color: var(--bg-color);
     font-family: 'open-sauce-sans', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Estilos para el encabezado */
@@ -106,3 +114,61 @@ a {
 /* Seccion de "¿Quienes somos?" */
 
 /* ------------------------------------------------------------------------- */
+
+/* Media Queries */
+
+/* Pantallas menores o iguales a 992px */
+@media (max-width: 992px) {
+    .header {
+        padding: 15px 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* Pantallas menores o iguales a 768px */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-contenido {
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .auth-buttons {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* Pantallas menores o iguales a 480px */
+@media (max-width: 480px) {
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button-login, .button-register {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
