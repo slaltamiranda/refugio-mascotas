@@ -18,7 +18,7 @@
                     <ul class="lista">
                         <li><a href="index.html" class="active-page">Inicio</a></li>
                         <li><a href="catalogo.html">Adoptar</a></li>
-                        <li><a href="#pie-pagina">Contacto</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                         <li><a href="solicitudes.html">Solicitudes</a></li>
                     </ul>
 
@@ -46,45 +46,92 @@
         </div>
     </section>
 
-    <div>
-        <h2>¡Encontrá a tu compañero ideal!</h2>
-        <div>
-            <img src="images/gato.webp" alt="Gato 1">
-            <img src="images/gato.webp" alt="Gato 2"> 
-            <img src="images/gato.webp" alt="Gato 3">
-        </div>
-    </div>
 
-    <div> <!-- Proceso de adopcion -->
-        <h3>¿Cómo funciona el proceso de adopción?</h3>
-        <div>
-            <h4>1er Paso</h4>
-            <p>Explorá nuestro catálogo de perros y gatos en adopción para encontrar a tu compañero ideal.</p>
-            <p>Mirá fotos, perfiles y personalidades de todos nuestros rescatados para encontrar con quién conectás mejor.</p>
+    <!-- Sección de animales en adopción -->
+    <section class="seccion-animales">
+        <h2 class="titulo-seccion">¡<u>Encontrá a tu compañero ideal</u>!</h2>
+        <div class="grid-animales">
+            
+            <div class="card-animal">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=400" alt="Marce">
+                <div class="card-info">
+                    <h3>Marce</h3>
+                    <p>5 años</p>
+                </div>
+            </div>
+            
+            <div class="card-animal">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=400" alt="Lucy">
+                <div class="card-info">
+                    <h3>Lucy</h3>
+                    <p>3 años</p>
+                </div>
+            </div>
+            
+            <div class="card-animal">
+                <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&q=80&w=400" alt="Ramón">
+                <div class="card-info">
+                    <h3>Ramón</h3>
+                    <p>6 años</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>2do Paso</h4>
-            <p>Crea tu cuenta o inicia sesión para enviar la solicitud de adopcion</p>
-            <p>Completá el formulario de solicitud de adopción y contanos un poco sobre vos y tu hogar.</p>
+    </section>
+
+    <!-- Sección Proceso de Adopción -->
+    <section class="seccion-proceso">
+        <div class="proceso-box">
+            <h2>¿Cómo funciona el proceso de adopción?</h2>
+
+            <div class="grid-pasos">
+                <div class="paso-card">
+                    <h4>1er Paso</h4>
+                    <p>Explorá nuestro catálogo de perros y gatos en adopción para encontrar a tu compañero ideal.</p> 
+                </div>
+                <div class="paso-card">
+                    <h4>2do Paso</h4>
+                    <p>Crea tu cuenta o inicia sesión para enviar la solicitud de adopción.</p>
+                </div>
+                <div class="paso-card">
+                    <h4>3er Paso</h4>
+                    <p>Un administrador evaluará tu solicitud y se pondrá en contacto con vos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer y contacto -->
+    <footer class="pie-de-pagina" id="contacto">
+        <div class="footer-ola">
+            
         </div>
         
-        <div>
-            <h4>3er Paso</h4>
-            <p>Un administrador evaluará tu solicitud y se pondrá en contacto</p>
-            <p>Si tu solicitud es aprobada, coordinaremos una visita para que conozcas a tu nuevo amigo y asegurarnos de que sea el match perfecto.</p>
-        </div>
-    </div>
-    
-    <footer id="pie-pagina"> <!-- Pie de página -->
-        <div>
-            <div class="logo"> <!-- Logo del refugio -->
-                <img src="images/logo.png" alt="Logo de Huellitas Felices">
+        <div class="footer-contenido">
+            <div class="footer-ola">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--primary-color)"></path>
+                </svg>
             </div>
-            <h1>Huellitas Felices</h1>
-        </div>
 
-        <p>Avenida 123, Buenos Aires, Argentina</p>
-        <p>+54 (11) 1234-4321</p>
-        <p>info@huellitasfelices.org</p>
+            <div class="footer-marca">
+                <img src="images/logo.png" alt="Logo Huellitas Felices" class="logo-footer">
+                <h3>Huellitas Felices</h3>
+            </div>
+                
+            <div class="footer-contacto">
+            <div class="contacto-item">
+                <span class="icono">📍</span>
+                <p>Pepito 8345, 6A<br>Buenos Aires, Argentina</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">📞</span>
+                <p>+54 (11) 1234-4321</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">✉️</span>
+                <p>info@huellitasfelices.com</p>
+            </div>
+            </div>
+        </div>
     </footer>
 </body>

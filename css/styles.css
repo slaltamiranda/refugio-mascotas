@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'open-sauce-sans';
-  src: url('fonts/open-sauce-sans.woff2') format('woff2');
+    font-family: 'open-sauce-sans';
+    src: url('fonts/open-sauce-sans.woff2') format('woff2');
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root { /* Colores de la pagina */
-  --primary-color: #49352d;
-  --secondary-color: #6b4e42;
-  --terciary-color: #9e7361;
-  --featured: #a8b8a5;
-  --bg-color: #f6f1eb;
+    --primary-color: #49352d;
+    --secondary-color: #6b4e42;
+    --terciary-color: #9e7361;
+    --featured: #a8b8a5;
+    --bg-color: #f6f1eb;
 }
 
 html, body{
@@ -33,10 +33,10 @@ img {
 
 /* Estilos para el encabezado */
 .header {
-  background-color: var(--primary-color);
-  padding: 15px 25px;
-  color: white;
-  width: 100%;
+    background-color: var(--primary-color);
+    padding: 15px 25px;
+    color: white;
+    width: 100%;
 }
 
 .nav-bar{
@@ -51,17 +51,17 @@ img {
 }
 
 .header-contenido {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .lista {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  font-size: 2rem;
-  gap: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    gap: 50px;
 }
 
 a {
@@ -173,6 +173,187 @@ a {
     background-color: #92a18a;
 }
 
+/* S */
+
+/* --- COMPAÑERO IDEAL (GALERÍA) --- */
+.seccion-animales {
+    padding: 4rem;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.grid-animales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-animal {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-animal img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.card-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Proceso de adopción */
+
+.seccion-proceso {
+    padding: 2rem 5% 6rem;
+}
+
+.proceso-box {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 25px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.proceso-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
+}
+
+.grid-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.paso-card {
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.paso-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.paso-card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: white;
+}
+
+/* Footer y Contacto */
+.pie-de-pagina {
+    background-color: var(--primary-color);
+    position: relative;
+    color: white;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.footer-ola {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-ola svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 5% 0;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-footer {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer-marca h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.footer-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contacto-item .icono {
+    font-size: 1.5rem;
+}
+
+.contacto-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    color: #ffffff;
+}
+
 /* ------------------------------------------------------------------------- */
 
 /* Media Queries */
@@ -193,6 +374,11 @@ a {
     .quienes-somos { padding: 6rem 4rem; }
     .qs-texto h2 { font-size: 4.5rem; }
     .btn-adoptar { font-size: 2.2rem; }
+
+    .grid-animales, 
+    .grid-pasos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Pantallas menores o iguales a 768px */
@@ -245,6 +431,28 @@ a {
     .btn-adoptar {
         font-size: 1.8rem;
         padding: 0.6rem 2rem;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .contacto-item {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .grid-animales, 
+    .grid-pasos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-animal img {
+        height: 300px;
     }
 }
 
