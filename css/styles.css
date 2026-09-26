@@ -28,10 +28,10 @@ html, body{
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Estilos para el encabezado */
-
 .header {
   background-color: var(--primary-color);
   padding: 15px 25px;
@@ -59,7 +59,7 @@ img {
 .lista {
   list-style: none;
   display: flex;
-  flex-direction: space-between;
+  justify-content: space-between;
   font-size: 2rem;
   gap: 50px;
 }
@@ -97,10 +97,15 @@ a {
 
 .button-login {
     display: flex;
-    background-color: var(--secondary-color);
+    background-color: var(--terciary-color);
     padding: 8px 16px;
     border-radius: 15px;
     font-size: 2rem;
+}
+
+.button-login:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 .button-register {
@@ -111,7 +116,62 @@ a {
     font-size: 2rem;
 }
 
+.button-register:hover {
+    background-color: #92a18a;
+    transform: translateY(-2px);
+}
+
 /* Seccion de "¿Quienes somos?" */
+.quienes-somos {
+    padding: 8rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo-qs.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.qs-contenido {
+    margin: 0 auto;
+}
+
+.qs-texto {
+    max-width: 1000px;
+}
+
+.qs-texto h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black ;
+}
+
+.qs-texto p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px black ;
+}
+
+.btn-adoptar {
+    display: inline-block;
+    background-color: #a3b19b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-adoptar:hover {
+    transform: translateY(-2px);
+    background-color: #92a18a;
+}
 
 /* ------------------------------------------------------------------------- */
 
@@ -120,12 +180,19 @@ a {
 /* Pantallas menores o iguales a 992px */
 @media (max-width: 992px) {
     .header {
-        padding: 15px 15px;
+        padding: 15px;
     }
-
     .nav {
         flex-wrap: wrap;
     }
+    .lista {
+        gap: 30px;
+        font-size: 1.5rem;
+    }
+    .title { font-size: 2.8rem; }
+    .quienes-somos { padding: 6rem 4rem; }
+    .qs-texto h2 { font-size: 4.5rem; }
+    .btn-adoptar { font-size: 2.2rem; }
 }
 
 /* Pantallas menores o iguales a 768px */
@@ -134,27 +201,50 @@ a {
         flex-direction: column;
         text-align: center;
     }
-
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
     .header-contenido {
         align-items: center;
+        width: 100%;
     }
-
     .nav {
         flex-direction: column;
         gap: 15px;
     }
-
     .lista {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+        font-size: 1.2rem;
     }
-
+    .title { font-size: 2.2rem; }
+    .subtitle { font-size: 1.5rem; }
+    
     .auth-buttons {
         margin-left: 0;
         width: 100%;
         justify-content: center;
         margin-top: 10px;
+    }
+    .button-login, .button-register {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+    }
+
+    .quienes-somos {
+        padding: 4rem 2rem;
+    }
+    .qs-texto h2 {
+        font-size: 3.5rem;
+    }
+    .qs-texto p {
+        font-size: 1.2rem;
+    }
+    .btn-adoptar {
+        font-size: 1.8rem;
+        padding: 0.6rem 2rem;
     }
 }
 
@@ -164,11 +254,27 @@ a {
         flex-direction: column;
         width: 100%;
     }
-
     .button-login, .button-register {
         width: 100%;
         text-align: center;
-        display: flex;
         justify-content: center;
+        font-size: 1rem;
+    }
+    .lista {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .quienes-somos {
+        padding: 3rem 1.5rem;
+    }
+    .qs-texto h2 {
+        font-size: 2.5rem;
+    }
+    .qs-texto p {
+        font-size: 1rem;
+    }
+    .btn-adoptar {
+        font-size: 1.4rem;
+        padding: 0.5rem 1.5rem;
     }
 }
