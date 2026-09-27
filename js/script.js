@@ -1,7 +1,3 @@
-const supabaseUrl = 'https://ebbzvosvssbjezwdzqhs.supabase.co';
-const supabaseKey = 'sb_publishable_5IaaGtY4nTCwAK1JZGd-pg_GTe3F_80';
-const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-
 // almacena la lista completa de mascotas y los filtros activos.
 let mascotasGlobales = [];
 let filtros = {
@@ -38,7 +34,7 @@ async function cargarCatálogo() {
     const contenedor = document.getElementById('contenedor-mascotas');
     contenedor.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Cargando...</p>';
 
-    const { data: mascotas, error } = await supabaseClient
+    const { data: mascotas, error } = await window.supabaseClient
         .from('mascotas')
         .select('*')
         .eq('estado_adopcion', 'Disponible');

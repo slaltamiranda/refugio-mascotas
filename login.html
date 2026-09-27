@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Huellitas Felices</title>
+    <title>Iniciar Sesión - Huellitas Felices</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
@@ -17,7 +17,7 @@
                 <h1 class="title">Huellitas Felices</h1>
                 <nav class="nav">
                     <ul class="lista">
-                        <li><a href="index.html"><u>Inicio</u></a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="catalogo.html">Adoptar</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                         <li><a href="solicitudes.html">Mis Solicitudes</a></li>
@@ -43,72 +43,33 @@
         </div>
     </header>
 
-    <!-- Sección de "¿Quiénes somos?" -->
-    <section class="quienes-somos">
-        <div class="qs-contenido">
-            <div class="qs-texto">
-                <h2>¿Quiénes somos?</h2>
-                <p>En <strong>Huellitas Felices</strong> rescatamos, rehabilitamos y cuidamos a perros y gatos en situación de calle. Nuestro <strong>objetivo</strong> es brindarles una segunda oportunidad y encontrarles un hogar responsable lleno de cariño.</p>
-                <a href="catalogo.html" class="btn-adoptar">Adoptar</a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Sección de animales en adopción -->
-    <section class="seccion-animales">
-        <h2 class="titulo-seccion">¡<u>Encontrá a tu compañero ideal</u>!</h2>
-        <div class="grid-animales">
+    <main class="contenedor-centrado">
+        <div class="tarjeta-auth">
+            <h2>Iniciar Sesión</h2>
             
-            <div class="card-animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkCsrbLRoOGSNTcN9zcJ3fNfdcGRwHjgDP5flj3GqVQ&s=10" alt="Marta">
-                <div class="card-info">
-                    <h3>Marta</h3>
-                    <p>2 meses</p>
+            <form id="formulario-login">
+                <div class="grupo-input">
+                    <label for="email-login">Correo electrónico</label>
+                    <input type="email" id="email-login" required placeholder="ejemplo@correo.com">
                 </div>
-            </div>
-            
-            <div class="card-animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3T24i2rnnVr6GwYIAs5YmjGbxlyF6Bia18zr3vNvLbQ&s=10" alt="Pity">
-                <div class="card-info">
-                    <h3>Pity</h3>
-                    <p>3 años</p>
-                </div>
-            </div>
-            
-            <div class="card-animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTse0HRCgeCqWSbOYsNni6Xik76AFTxSMjLUKtUk-8Gjg&s=10" alt="Ramón">
-                <div class="card-info">
-                    <h3>Eduardo</h3>
-                    <p>6 años</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sección Proceso de Adopción -->
-    <section class="seccion-proceso">
-        <div class="proceso-box">
-            <h2>¿Cómo funciona el proceso de adopción?</h2>
+                <div class="grupo-input">
+                    <label for="password-login">Contraseña</label>
+                    <input type="password" id="password-login" required placeholder="Tu contraseña">
+                </div>
 
-            <div class="grid-pasos">
-                <div class="paso-card">
-                    <h4>1er Paso</h4>
-                    <p>Explorá nuestro catálogo de perros y gatos en adopción para encontrar a tu compañero ideal.</p> 
-                </div>
-                <div class="paso-card">
-                    <h4>2do Paso</h4>
-                    <p>Crea tu cuenta o inicia sesión para enviar la solicitud de adopción.</p>
-                </div>
-                <div class="paso-card">
-                    <h4>3er Paso</h4>
-                    <p>Un administrador evaluará tu solicitud y se pondrá en contacto con vos.</p>
-                </div>
-            </div>
+                <button type="submit" class="btn-principal" style="width: 100%; margin-top: 15px;">Ingresar</button>
+                
+                <p id="mensaje-login" style="text-align: center; margin-top: 15px; color: red;"></p>
+            </form>
+
+            <p style="text-align: center; margin-top: 20px;">
+                ¿No tenés cuenta? <a href="registro.html" style="color: var(--secondary-color); font-weight: bold;">Registrate acá</a>
+            </p>
         </div>
-    </section>
-    
-    <!-- Footer y contacto -->
+    </main>
+
+    <!-- Footer y Contacto -->
     <footer class="pie-de-pagina" id="contacto">
         <div class="footer-ola">
             
@@ -143,7 +104,11 @@
         </div>
     </footer>
 
+    <!-- Supabase CDN y el mismo script de autenticación -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
     <script src="js/nav.js"></script>
+
+    
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Huellitas Felices</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
@@ -17,18 +18,25 @@
                 <nav class="nav">
                     <ul class="lista">
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html" class="active-page">Adoptar</a></li>
+                        <li><a href="catalogo.html"><u>Adoptar</u></a></li>
                         <li><a href="#contacto">Contacto</a></li>
                         <li><a href="solicitudes.html">Mis Solicitudes</a></li>
                     </ul>
 
-                    <div class="auth-buttons">
+                    <!-- si no estas logueado -->
+                    <div id="nav-visitante" class="auth-buttons">
                         <div class="button-login">
-                            <a href="#">Iniciar Sesión</a>
+                            <a href="login.html">Iniciar Sesión</a>
                         </div>
                         <div class="button-register">
-                            <a href="#">Registrarse</a>
+                            <a href="registro.html">Registrarse</a>
                         </div>
+                    </div>
+
+                    <!-- si ya iniciaste sesion -->
+                    <div id="nav-usuario" style="display: none; align-items: center; gap: 15px;">
+                        <span id="nav-saludo" style="font-weight: bold;"></span>
+                        <button id="btn-cerrar-sesion" class="btn-principal" style="padding: 5px 15px; font-size: 2rem; cursor: pointer;">Cerrar Sesión</button>
                     </div>
                 </nav>
             </div>
@@ -94,8 +102,9 @@
         </div>
     </footer>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/script.js"></script>    
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
