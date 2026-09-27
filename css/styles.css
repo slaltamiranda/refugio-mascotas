@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'open-sauce-sans';
-    src: url('fonts/open-sauce-sans.woff2') format('woff2');
+    src: url('../fonts/open-sauce-sans.woff2') format('truetype');
 }
 
 * {
@@ -30,6 +30,10 @@ img {
   height: auto;
   display: block;
 }
+
+/*  ================================================
+    ESTILOS GENERALES (HEADER, FOOTER)
+    ================================================ */
 
 /* Estilos para el encabezado */
 .header {
@@ -121,162 +125,6 @@ a {
     transform: translateY(-2px);
 }
 
-/* Seccion de "¿Quienes somos?" */
-.quienes-somos {
-    padding: 8rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo-qs.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.qs-contenido {
-    margin: 0 auto;
-}
-
-.qs-texto {
-    max-width: 1000px;
-}
-
-.qs-texto h2 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px black ;
-}
-
-.qs-texto p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px black ;
-}
-
-.btn-adoptar {
-    display: inline-block;
-    background-color: #a3b19b;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.8rem 2.5rem;
-    font-size: 3rem;
-    font-weight: bold;
-    border-radius: 6px;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-adoptar:hover {
-    transform: translateY(-2px);
-    background-color: #92a18a;
-}
-
-/* S */
-
-/* --- COMPAÑERO IDEAL (GALERÍA) --- */
-.seccion-animales {
-    padding: 4rem;
-    text-align: center;
-}
-
-.titulo-seccion {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.grid-animales {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card-animal {
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card-animal img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.card-info {
-    padding: 1rem;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.card-info h3 {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-}
-
-.card-info p {
-    font-size: 1rem;
-    color: white;
-}
-
-/* Proceso de adopción */
-
-.seccion-proceso {
-    padding: 2rem 5% 6rem;
-}
-
-.proceso-box {
-    background-color: var(--secondary-color);
-    color: white;
-    border-radius: 25px;
-    padding: 3rem;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.proceso-box h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    text-decoration: underline;
-}
-
-.grid-pasos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.paso-card {
-    background-color: var(--primary-color);
-    border-radius: 18px;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 150px;
-}
-
-.paso-card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: white;
-    font-weight: bold;
-}
-
-.paso-card p {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    color: white;
-}
-
 /* Footer y Contacto */
 .pie-de-pagina {
     background-color: var(--primary-color);
@@ -354,9 +202,307 @@ a {
     color: #ffffff;
 }
 
-/* ------------------------------------------------------------------------- */
+/*  ================================================
+    SECCION QUIENES SOMOS (index.html)
+    ================================================ */
 
-/* Media Queries */
+.quienes-somos {
+    padding: 8rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo-qs.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.qs-contenido {
+    margin: 0 auto;
+}
+
+.qs-texto {
+    max-width: 1000px;
+}
+
+.qs-texto h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black ;
+}
+
+.qs-texto p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px black ;
+}
+
+.btn-adoptar {
+    display: inline-block;
+    background-color: #a3b19b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-adoptar:hover {
+    transform: translateY(-2px);
+    background-color: #92a18a;
+}
+
+/*  ================================================
+    SECCION ANIMALES (index.html)
+    ================================================ */
+
+.seccion-animales {
+    padding: 4rem;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.grid-animales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-animal {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-animal img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.card-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: white;
+}
+
+/*  ================================================
+    SECCION PROCESO DE ADOPCIÓN (index.html)
+    ================================================ */
+
+.seccion-proceso {
+    padding: 2rem 5% 6rem;
+}
+
+.proceso-box {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 25px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.proceso-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
+}
+
+.grid-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.paso-card {
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.paso-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.paso-card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: white;
+}
+
+/* =========================================
+   SECCIÓN CATÁLOGO (catalogo.html)
+   ========================================= */
+
+.catalogo-seccion {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.catalogo-seccion .titulo-seccion {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* =========================================
+   TARJETAS DE MASCOTAS (catalogo.html)
+   ========================================= */
+
+.mascota-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--terciary-color);
+}
+
+.mascota-img-container {
+    width: 100%;
+    height: 250px;
+}
+
+.mascota-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mascota-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.8rem;
+}
+
+.mascota-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.mascota-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+/* =========================================
+   BARRA DE BÚSQUEDA Y FILTROS (catalogo.html)
+   ========================================= */
+
+.buscador-container {
+    background-color: #ffffff;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    color: #333;
+}
+
+.filtros-etiquetas {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    border: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.tag-gatos { background-color: #C2E2FF; }
+.tag-perros { background-color: #A3E4D7; }
+.tag-ninos { background-color: #E8B9FF; }
+
+.btn-filtro.activo {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* =========================================
+   MEDIA QUERIES GLOBALES
+   ========================================= */
 
 /* Pantallas menores o iguales a 992px */
 @media (max-width: 992px) {
@@ -378,6 +524,10 @@ a {
     .grid-animales, 
     .grid-pasos {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
     }
 }
 
@@ -453,6 +603,10 @@ a {
 
     .card-animal img {
         height: 300px;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
     }
 }
 

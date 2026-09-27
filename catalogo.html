@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Huellitas Felices</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado con logo y barra de navegación -->
+    <header class="header">
+        <div class="nav-bar">
+            <img src="images/logo.png" alt="Logo de Huellitas Felices" class="logo">
+            <div class="header-contenido">
+                <h1 class="title">Huellitas Felices</h1>
+                <nav class="nav">
+                    <ul class="lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html" class="active-page">Adoptar</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="solicitudes.html">Mis Solicitudes</a></li>
+                    </ul>
+
+                    <div class="auth-buttons">
+                        <div class="button-login">
+                            <a href="#">Iniciar Sesión</a>
+                        </div>
+                        <div class="button-register">
+                            <a href="#">Registrarse</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de catálogo de mascotas -->
+    <main class="catalogo-seccion">
+        <h1 class="titulo-seccion">Encontrá a tu compañero</h1>
+        <div class="buscador-container">
+            <div class="input-wrapper">
+                <span class="icono-lupa">🔍</span>
+                <input type="text" id="input-busqueda" placeholder="Buscar por nombre...">
+            </div>
+            
+            <div class="filtros-etiquetas">
+                <span style="font-weight: bold;">etiquetas:</span>
+                <button class="btn-filtro tag-gatos" data-filtro="apto_gatos">apto gatos</button>
+                <button class="btn-filtro tag-perros" data-filtro="apto_perros">apto perros</button>
+                <button class="btn-filtro tag-ninos" data-filtro="apto_ninos">apto niños</button>
+            </div>
+        </div>
+        
+        <div id="contenedor-mascotas" class="catalogo-grid">
+            <p style="text-align: center;">Buscando...</p>
+
+            <!-- Aca van a aparecer todas las tarjetas de mascotas, en caso de que hayan -->
+        </div>  
+    </main>
+
+    <!-- Footer y Contacto -->
+    <footer class="pie-de-pagina" id="contacto">
+        <div class="footer-ola">
+            
+        </div>
+        
+        <div class="footer-contenido">
+            <div class="footer-ola">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--primary-color)"></path>
+                </svg>
+            </div>
+
+            <div class="footer-marca">
+                <img src="images/logo.png" alt="Logo Huellitas Felices" class="logo-footer">
+                <h3>Huellitas Felices</h3>
+            </div>
+                
+            <div class="footer-contacto">
+            <div class="contacto-item">
+                <span class="icono">📍</span>
+                <p>Pepito 8345, 6A<br>Buenos Aires, Argentina</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">📞</span>
+                <p>+54 (11) 1234-4321</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">✉️</span>
+                <p>info@huellitasfelices.com</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/script.js"></script>    
+</body>
+</html>
