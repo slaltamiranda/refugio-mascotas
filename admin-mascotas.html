@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Mascotas - Huellitas Felices</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado con logo y barra de navegación -->
+    <header class="header">
+        <div class="nav-bar">
+            <img src="images/logo.png" alt="Logo de Huellitas Felices" class="logo">
+            <div class="header-contenido">
+                <h1 class="title">Huellitas Felices</h1>
+                <nav class="nav">
+                    <ul class="lista">
+                        <li><a href="index.html"><u>Inicio</u></a></li>
+                        <li><a href="catalogo.html">Adoptar</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="solicitudes.html">Mis Solicitudes</a></li>
+                    </ul>
+
+                    <!-- si no estas logueado -->
+                    <div id="nav-visitante" class="auth-buttons">
+                        <div class="button-login">
+                            <a href="login.html">Iniciar Sesión</a>
+                        </div>
+                        <div class="button-register">
+                            <a href="registro.html">Registrarse</a>
+                        </div>
+                    </div>
+
+                    <!-- si ya iniciaste sesion -->
+                    <div id="nav-usuario" style="display: none; align-items: center; gap: 15px;">
+                        <span id="nav-saludo" style="font-weight: bold;"></span>
+                        <button id="btn-cerrar-sesion" class="btn-principal" style="padding: 5px 15px; font-size: 2rem; cursor: pointer;">Cerrar Sesión</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal" style="padding: 30px 20px; max-width: 1000px; margin: 0 auto;">
+        <h2 class="title" style="text-align: center; margin-bottom: 25px; color: #4a3b32;">Gestión del Catálogo de Mascotas</h2>
+
+        <section style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); margin-bottom: 40px;">
+            <h3 id="titulo-form-mascota" style="margin-top: 0; color: #8b5a2b; margin-bottom: 20px;">Agregar Nueva Mascota</h3>
+            
+            <form id="form-mascota" style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <input type="hidden" id="mascota-id">
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label for="nombre" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">Nombre:</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Firulais" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <label for="especie" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">Especie:</label>
+                        <select id="especie" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white;">
+                            <option value="">Seleccioná una especie...</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label for="fecha_nacimiento" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">Fecha de Nacimiento (Aprox):</label>
+                        <input type="date" id="fecha_nacimiento" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white;">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <label for="estado" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">Estado:</label>
+                        <select id="estado" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white;">
+                            <option value="Disponible">Disponible</option>
+                            <option value="En Proceso">En Proceso</option>
+                            <option value="Adoptado">Adoptado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="imagen_url" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">URL de la Imagen (Foto):</label>
+                    <input type="url" id="imagen_url" required placeholder="https://ejemplo.com/foto.jpg" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                </div>
+
+                <div>
+                    <label for="descripcion" style="display: block; font-weight: bold; margin-bottom: 5px; color: #4a3b32;">Descripción / Historia:</label>
+                    <textarea id="descripcion" rows="3" required placeholder="Contá un poco sobre su personalidad..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;"></textarea>
+                </div>
+
+                <div style="background: #fdf8f5; padding: 15px; border-radius: 8px; border: 1px solid #f0e6dc;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 8px; color: #4a3b32;">Compatibilidad:</label>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="apto_ninos"> Apto Niños</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="apto_perros"> Apto Perros</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 6px;"><input type="checkbox" id="apto_gatos"> Apto Gatos</label>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 10px;">
+                    <button type="submit" id="btn-guardar-mascota" style="flex: 2; background-color: #8b5a2b; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                        Guardar Mascota
+                    </button>
+                    <button type="button" id="btn-cancelar-edicion" style="display: none; flex: 1; background-color: #777; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3 style="color: #4a3b32; margin-bottom: 20px; text-align: center;">Mascotas Registradas</h3>
+            <div id="contenedor-admin-mascotas" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                <p style="text-align: center; grid-column: 1/-1; color: #666;">Cargando catálogo...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/admin-mascotas.js"></script>
+</body>
+</html>
