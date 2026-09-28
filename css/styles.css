@@ -644,6 +644,83 @@ a {
     background-color: #fcf9f5;
 }
 
+/* =========================================
+   ESTILOS DE LA VISTA "MIS SOLICITUDES"
+   ========================================= */
+
+.contenedor-principal {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta individual de solicitud */
+.tarjeta-solicitud {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    gap: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-solicitud:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-solicitud img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f4ede4;
+}
+
+/* Información de la mascota y estado */
+.info-solicitud {
+    flex-grow: 1;
+}
+
+.info-solicitud h3 {
+    margin: 0 0 5px 0;
+    color: #4a3b32;
+    font-size: 1.3rem;
+}
+
+.info-solicitud p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777777;
+}
+
+/* Etiquetas de estado */
+.badge-estado {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge-pendiente {
+    background-color: #f39c12;
+    color: white;
+}
+
+.badge-aprobada {
+    background-color: #27ae60;
+    color: white;
+}
+
+.badge-rechazada {
+    background-color: #e74c3c;
+    color: white;
+}
+
 
 /* =========================================
    MEDIA QUERIES GLOBALES
@@ -752,6 +829,19 @@ a {
 
     .catalogo-grid {
         grid-template-columns: 1fr;
+    }
+
+    #nav-usuario {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    #nav-usuario span, #nav-usuario p {
+        font-size: 0.95rem;
+        word-break: break-word;
     }
 }
 
