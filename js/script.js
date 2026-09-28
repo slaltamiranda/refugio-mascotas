@@ -81,6 +81,10 @@ function renderizarMascotas(listaMascotas) {
                     <div class="mascota-tags" style="margin-top: 15px;">
                         ${etiquetasHTML}
                     </div>
+
+                    <button class="btn-principal" onclick="iniciarAdopcion(${mascota.id_mascota})">
+                        Adoptar
+                    </button>
                 </div>
             </div>
         `;
@@ -127,6 +131,20 @@ function aplicarFiltros() {
     });
 
     renderizarMascotas(mascotasFiltradas);
+}
+
+async function iniciarAdopcion(idMascota) {
+
+    const { data: { session } } = await window.supabaseClient.auth.getSession();
+
+    if (!session) {
+        
+        alert("¡Hola! Para iniciar un proceso de adopción, por favor iniciá sesión o registrate.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    window.location.href = `formulario-adopcion.html?id_mascota=${idMascota}`;
 }
 
 // muestra por pantalla el catalogo

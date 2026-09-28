@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Adopción | Huellitas Felices</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Encabezado con logo y barra de navegación -->
+    <header class="header">
+        <div class="nav-bar">
+            <img src="images/logo.png" alt="Logo de Huellitas Felices" class="logo">
+            <div class="header-contenido">
+                <h1 class="title">Huellitas Felices</h1>
+                <nav class="nav">
+                    <ul class="lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html"><u>Adoptar</u></a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="solicitudes.html">Mis Solicitudes</a></li>
+                    </ul>
+
+                    <!-- si no estas logueado -->
+                    <div id="nav-visitante" class="auth-buttons">
+                        <div class="button-login">
+                            <a href="login.html">Iniciar Sesión</a>
+                        </div>
+                        <div class="button-register">
+                            <a href="registro.html">Registrarse</a>
+                        </div>
+                    </div>
+
+                    <!-- si ya iniciaste sesion -->
+                    <div id="nav-usuario" style="display: none; align-items: center; gap: 15px;">
+                        <span id="nav-saludo" style="font-weight: bold;"></span>
+                        <button id="btn-cerrar-sesion" class="btn-principal" style="padding: 5px 15px; font-size: 2rem; cursor: pointer;">Cerrar Sesión</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="contenedor-principal">
+        <section class="seccion-formulario">
+            <h2 class="title" style="text-align: center;">Solicitud de Adopción</h2>
+            
+            <div id="resumen-mascota" style="text-align: center; margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                <p>Cargando información de la mascota...</p>
+            </div>
+
+            <form id="formulario-adopcion" class="form-container">
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" required placeholder="Ingresá tu DNI (sin puntos)">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono" required placeholder="Ej: 1123456789">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección completa:</label>
+                    <input type="text" id="direccion" required placeholder="Calle, Número, Localidad">
+                </div>
+
+                <!-- NUEVAS PREGUNTAS DEL PERFIL -->
+                <div class="form-group">
+                    <label for="tipo_vivienda">Tipo de vivienda:</label>
+                    <select id="tipo_vivienda" required>
+                        <option value="">Seleccioná una opción...</option>
+                        <option value="Casa con patio cerrado">Casa con patio cerrado</option>
+                        <option value="Departamento con red">Departamento con red en balcón/ventanas</option>
+                        <option value="Departamento sin red">Departamento sin red de protección</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="situacion_vivienda">¿Alquilás o sos propietario?</label>
+                    <select id="situacion_vivienda" required>
+                        <option value="">Seleccioná una opción...</option>
+                        <option value="Propietario">Soy propietario</option>
+                        <option value="Alquilo y permiten">Alquilo (y me permiten tener mascotas)</option>
+                        <option value="Alquilo sin permiso">Alquilo (no estoy seguro si permiten)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="otras_mascotas">¿Tenés otras mascotas en casa?</label>
+                    <select id="otras_mascotas" required>
+                        <option value="">Seleccioná una opción...</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="horas_solo">¿Cuántas horas aprox. pasaría solo/a al día?</label>
+                    <input type="number" id="horas_solo" required min="0" max="24" placeholder="Ej: 4">
+                </div>
+
+                <div class="form-group">
+                    <label for="motivacion">¿Por qué te gustaría adoptar a esta mascota?</label>
+                    <textarea id="motivacion" rows="4" required placeholder="Contanos un poco sobre tu familia y por qué querés sumar un nuevo integrante..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-principal" style="width: 100%; margin-top: 15px;">Enviar Solicitud</button>
+                <p id="mensaje-adopcion" style="text-align: center; margin-top: 10px; font-weight: bold;"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer y Contacto -->
+    <footer class="pie-de-pagina" id="contacto">
+        <div class="footer-ola">
+            
+        </div>
+        
+        <div class="footer-contenido">
+            <div class="footer-ola">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--primary-color)"></path>
+                </svg>
+            </div>
+
+            <div class="footer-marca">
+                <img src="images/logo.png" alt="Logo Huellitas Felices" class="logo-footer">
+                <h3>Huellitas Felices</h3>
+            </div>
+                
+            <div class="footer-contacto">
+            <div class="contacto-item">
+                <span class="icono">📍</span>
+                <p>Pepito 8345, 6A<br>Buenos Aires, Argentina</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">📞</span>
+                <p>+54 (11) 1234-4321</p>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">✉️</span>
+                <p>info@huellitasfelices.com</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/adopcion.js"></script>
+</body>
+</html>
