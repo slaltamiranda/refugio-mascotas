@@ -37,7 +37,7 @@ async function cargarCatálogo() {
     const { data: mascotas, error } = await window.supabaseClient
         .from('mascotas')
         .select('*')
-        .eq('estado_adopcion', 'Disponible');
+        .eq('estado', 'Disponible');
 
     if (error) {
         console.error("Error al traer los datos:", error);

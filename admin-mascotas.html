@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Mascotas - Huellitas Felices</title>
+    <title>Gestión de Mascotas | Huellitas Felices</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <!-- Encabezado con logo y barra de navegación -->
@@ -15,7 +16,7 @@
                 <h1 class="title">Huellitas Felices</h1>
                 <nav class="nav">
                     <ul class="lista">
-                        <li><a href="index.html"><u>Inicio</u></a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="catalogo.html">Adoptar</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                         <li><a href="solicitudes.html">Mis Solicitudes</a></li>
@@ -119,6 +120,37 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer y Contacto -->
+    <footer class="pie-de-pagina" id="contacto">
+        <div class="footer-ola">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--primary-color)"></path>
+            </svg>
+        </div>
+
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <img src="images/logo.png" alt="Logo Huellitas Felices" class="logo-footer">
+                <h3>Huellitas Felices</h3>
+            </div>
+
+            <div class="footer-contacto">
+                <div class="contacto-item">
+                    <i class="fa-solid fa-location-dot icono" aria-hidden="true"></i>
+                    <p>Pepito 8345, 6A<br>Buenos Aires, Argentina</p>
+                </div>
+                <div class="contacto-item">
+                    <i class="fa-solid fa-phone icono" aria-hidden="true"></i>
+                    <p>+54 (11) 1234-4321</p>
+                </div>
+                <div class="contacto-item">
+                    <i class="fa-solid fa-envelope icono" aria-hidden="true"></i>
+                    <p>info@huellitasfelices.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="js/nav.js"></script>

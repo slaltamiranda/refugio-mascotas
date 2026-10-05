@@ -17,12 +17,21 @@
     --bg-color: #f6f1eb;
 }
 
-html, body{
+html, body {
     width: 100%;
-    height: auto;
     background-color: var(--bg-color);
     font-family: 'open-sauce-sans', sans-serif;
     overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 img {
@@ -193,6 +202,9 @@ a {
 
 .contacto-item .icono {
     font-size: 1.5rem;
+    width: 1.8rem;
+    text-align: center;
+    color: white;
 }
 
 .contacto-item p {
