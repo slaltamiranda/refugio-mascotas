@@ -3,6 +3,7 @@ const mensajeAuth = document.getElementById('mensaje-auth');
 
 if (formularioRegistro) {
     formularioRegistro.addEventListener('submit', async (e) => {
+        e.preventDefault();
         
         const nombre = document.getElementById('nombre').value;
         const email = document.getElementById('email').value;

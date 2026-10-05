@@ -16,9 +16,33 @@ async function verificarSesion() {
     if (session) {
         if (navVisitante) navVisitante.style.display = 'none';
         if (navUsuario) navUsuario.style.display = 'flex';
-        
+
         const nombre = session.user.user_metadata?.nombre_completo || 'Usuario';
         if (navSaludo) navSaludo.textContent = `¡Hola, ${nombre}!`;
+
+        const { data: usuario } = await window.supabaseClient
+            .from('usuarios')
+            .select('rol')
+            .eq('id_usuario', session.user.id)
+            .single();
+
+        const lista = document.querySelector('.lista');
+                if (usuario?.rol === 'admin' && lista) {
+            ['solicitudes.html', 'catalogo.html'].forEach(href => {
+                lista.querySelectorAll(`a[href="${href}"]`)
+                    .forEach(a => a.parentElement.remove());
+            });
+
+            [['admin-mascotas.html', 'Mascotas'],
+             ['admin-solicitudes.html', 'Solicitudes']].forEach(([href, texto]) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = href;
+                a.textContent = texto;
+                li.appendChild(a);
+                lista.appendChild(li);
+            });
+        }
     } else {
         if (navVisitante) navVisitante.style.display = 'flex';
         if (navUsuario) navUsuario.style.display = 'none';
@@ -30,6 +54,25 @@ async function verificarSesion() {
             window.location.reload();
         });
     }
+}
+
+async function requerirAdmin() {
+    const { data: { session } } = await window.supabaseClient.auth.getSession();
+    if (!session) {
+        window.location.href = 'login.html';
+        return false;
+    }
+    const { data: usuario } = await window.supabaseClient
+        .from('usuarios')
+        .select('rol')
+        .eq('id_usuario', session.user.id)
+        .single();
+
+    if (!usuario || usuario.rol !== 'admin') {
+        window.location.href = 'index.html';
+        return false;
+    }
+    return true;
 }
 
 document.addEventListener('DOMContentLoaded', verificarSesion);

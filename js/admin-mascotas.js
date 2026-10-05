@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    if (!(await requerirAdmin())) return;
     await cargarMascotasAdmin();
 
     const form = document.getElementById('form-mascota');
