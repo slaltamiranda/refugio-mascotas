@@ -733,6 +733,29 @@ a {
     color: white;
 }
 
+.nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.lista {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px clamp(15px, 3vw, 50px);
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+#nav-usuario {
+    flex-wrap: wrap;
+}
+
+#nav-usuario .btn-principal {
+    font-size: clamp(1.2rem, 2.4vw, 2rem) !important;
+}
 
 /* =========================================
    MEDIA QUERIES GLOBALES
